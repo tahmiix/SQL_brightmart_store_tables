@@ -48,8 +48,8 @@ CONSTRAINT uq_order_product
 	UNIQUE (order_id, product_id)
 );
 
-SELECT table_name
-FROM information_schema.tables
-WHERE table_schema = 'public'
-  AND table_type = 'BASE TABLE'
-ORDER BY table_name;
+1. Customer and Orders are in their own tables because one customer with the same name could have multiple orders, it also protects the integrity of data by not duplicating a customer each time they order
+2. It contains the customer id for linking an order to a customer 
+3. if stored as text an application could send a string as an argument and that would mess up the integrity of data in our database
+4. It protects against adding negative values to the database 
+5. It store unit price because the price could change while the order is already placed and if its not there it would change prices even for orders that are already paid for  
