@@ -121,3 +121,22 @@ ORDER BY stock_quantity ASC, price DESC;
 "Lenovo ideapad"	10	4500.00
 "HP"	15	3000.00
 
+Checkpoint answers
+
+1. SELECT first_name, email 
+    FROM customers;
+
+2. SELECT * FROM products
+    WHERE price > 2500;
+
+3. SELECT * FROM orders
+    WHERE status = 'PAID' OR status = 'SHIPPED';
+
+4. SELECT product_name FROM products
+    WHERE product_name ILIKE '%dell%';
+
+5. SELECT * FROM products 
+    ORDER BY price DESC;
+
+
+
